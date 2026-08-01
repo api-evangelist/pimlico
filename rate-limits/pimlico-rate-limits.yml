@@ -1,0 +1,15 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.pimlico.io/pricing
+limits:
+- plan: Pay-as-you-go
+  limit_count: 5000
+  interval: minute
+  scope: per account
+  enforcement: HTTP 429 on exceeding the cap
+- plan: Enterprise
+  limit_count: null
+  interval: minute
+  scope: per account
+  note: Unlimited rate limits (custom).
+signaling: HTTP 429 Too Many Requests when the per-minute cap is exceeded.

@@ -1,0 +1,19 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.pimlico.io/pricing
+model: usage-based (credit metering) + gas-sponsorship surcharge
+currency: USD
+billing:
+  unit: credit
+  included_per_month: 10000000
+  overage_rate: $1 per 100,000 credits
+  testnets: free
+  cost_per_user_operation: ~$0.0075
+  sponsorship_surcharge: 10% on mainnet
+  credit_costs:
+  - operation: sponsorship / submission
+    credits: 500
+  - operation: data calls
+    credits: 1-300
+dashboard: https://dashboard.pimlico.io/billing/plan
+enterprise: Custom pre-paid rates, unlimited rate limits, custom SLA.

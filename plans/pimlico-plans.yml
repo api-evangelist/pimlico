@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.pimlico.io/pricing
+currency: USD
+plans:
+- name: Pay-as-you-go
+  popular: true
+  monthly_cost: 0
+  card_required: true
+  included_credits: 10000000
+  included_credits_period: month
+  overage: $1 per 100,000 credits
+  rate_limit: 5,000 requests / minute
+  chains: 100+ (mainnets and testnets)
+  cost_per_user_operation: ~$0.0075
+  sponsorship_surcharge: 10% on mainnet
+  testnets_free: true
+- name: Enterprise
+  monthly_cost: custom
+  features:
+  - Lower pre-paid rates
+  - Unlimited rate limits
+  - Custom uptime SLA
+  - 24/7 phone support
+  - ERC-20 gas payments in 300+ tokens
+credit_model:
+  unit: credit
+  examples:
+  - sponsorship or submission: 500 credits
+  - data calls: 1-300 credits

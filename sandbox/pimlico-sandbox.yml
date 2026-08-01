@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.pimlico.io + https://www.pimlico.io/pricing
+test_vs_live:
+  model: >-
+    Pimlico separates test and production by CHAIN rather than by key prefix:
+    building on testnets is entirely free (no charges), while mainnet usage is
+    billed. The same API key and endpoint shape are used against a testnet
+    chain segment.
+  free_on_testnets: true
+  example_test_chain: sepolia
+  example_endpoint: https://api.pimlico.io/v2/sepolia/rpc?apikey=YOUR_API_KEY
+tutorials:
+  quickstart: https://docs.pimlico.io/references/permissionless
+  tutorial: https://docs.pimlico.io/guides/tutorials/tutorial-1
+notes:
+  - >-
+    No hosted test cards / magic values are published (this is blockchain
+    infrastructure, not a card processor); testing is done against public EVM
+    testnets using standard faucet-funded accounts.
+  - >-
+    Sponsorship policies and API keys created in the dashboard apply to both
+    testnet and mainnet traffic.

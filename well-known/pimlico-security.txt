@@ -1,0 +1,59 @@
+# Pimlico security contact and coordinated vulnerability disclosure information
+# Format: RFC 9116 security.txt
+# ██████╗  ██╗ ███╗   ███╗ ██╗      ██╗  ██████╗  ██████╗
+# ██╔══██╗ ██║ ████╗ ████║ ██║      ██║ ██╔════╝ ██╔═══██╗
+# ██████╔╝ ██║ ██╔████╔██║ ██║      ██║ ██║      ██║   ██║
+# ██╔═══╝  ██║ ██║╚██╔╝██║ ██║      ██║ ██║      ██║   ██║
+# ██║      ██║ ██║ ╚═╝ ██║ ███████╗ ██║ ╚██████╗ ╚██████╔╝
+# ╚═╝      ╚═╝ ╚═╝     ╚═╝ ╚══════╝ ╚═╝  ╚═════╝  ╚═════╝
+# -------------------------
+# Scope and program notes
+# -------------------------
+# In scope (primary production components):
+# - pimlico.io
+# - api.pimlico.io
+# - dashboard.pimlico.io
+# - docs.pimlico.io
+# - Pimlico-maintained "Permissionless" JavaScript library
+# - vulnerabilities in Pimlico-managed infrastructure that underpins the in-scope components
+#   (e.g., cloud configuration, Kubernetes clusters, networking, CI/CD, or managed services)
+#   are in scope when they can materially impact the security of the in-scope production services
+#
+# Out of scope:
+# - demo/test/experimental sites or services not explicitly listed above
+# - DoS / DDoS reports (including HTTP/2 Rapid Reset)
+#
+# If you've found a genuine application or infrastructure vulnerability in-scope,
+# please email security@pimlico.io with clear reproduction steps, impact, and affected asset(s).
+# Please do not request payment up front or submit reports that consist only of automated scan output.
+# We review and reward only verified, in-scope vulnerabilities with clear reproduction steps and security impact.
+# A simple KYC (Know Your Customer) check will be required before any reward payout is processed.
+#
+# -------------------------
+# Known issues & common non-qualifying reports
+# -------------------------
+# The following are known, low-severity or cosmetic issues that we have already
+# evaluated and accepted. A fix is either not applicable or not warranted given
+# the minimal risk. Reports for these will not qualify for a reward:
+#
+# - Weak Cipher Suites Detected in SSL/TLS Configuration
+#
+# This list may be updated over time. If your finding matches one of the above,
+# please do not submit it — it will not be eligible for a reward.
+#
+# -------------------------
+# Third-party vendor notice
+# -------------------------
+# Authentication and user management for our services are handled by Clerk
+# (https://clerk.com). If you discover a vulnerability related to authentication
+# or user-management functionality, please consider whether the issue originates
+# in Clerk's platform and, if so, report it directly to Clerk's own security
+# team rather than to us.
+
+
+Contact: mailto:security@pimlico.io
+Preferred-Languages: en
+Canonical: https://www.pimlico.io/.well-known/security.txt
+Canonical: https://www.pimlico.io/security.txt
+Expires: 2027-01-31T23:59:59Z
+Encryption: https://www.pimlico.io/.well-known/pgp-key.txt

@@ -1,0 +1,47 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: https://docs.pimlico.io/references/bundler + https://docs.pimlico.io/references/paymaster
+note: >-
+  Pimlico does not publish an official hosted MCP server (no @pimlico/mcp on
+  npm, none referenced in docs/llms.txt as of 2026-07-20). This is a CANDIDATE
+  tool list derived from Pimlico's documented ERC-4337 JSON-RPC methods so an
+  agent server could be generated. Endpoint:
+  https://api.pimlico.io/v2/{chain}/rpc?apikey=API_KEY
+server:
+  name: pimlico
+  transport: http
+tools:
+- name: send_user_operation
+  description: Submit an ERC-4337 user operation to the bundler.
+  source_method: eth_sendUserOperation
+- name: estimate_user_operation_gas
+  description: Estimate gas limits for a user operation.
+  source_method: eth_estimateUserOperationGas
+- name: get_user_operation_receipt
+  description: Retrieve the receipt for a submitted user operation.
+  source_method: eth_getUserOperationReceipt
+- name: get_user_operation_by_hash
+  description: Look up a user operation by its hash.
+  source_method: eth_getUserOperationByHash
+- name: supported_entry_points
+  description: List supported ERC-4337 EntryPoint addresses.
+  source_method: eth_supportedEntryPoints
+- name: get_user_operation_gas_price
+  description: Get current slow/standard/fast gas pricing for user operations.
+  source_method: pimlico_getUserOperationGasPrice
+- name: get_user_operation_status
+  description: Check the bundling status of a user operation.
+  source_method: pimlico_getUserOperationStatus
+- name: sponsor_user_operation
+  description: Request verifying-paymaster sponsorship for a user operation.
+  source_method: pm_sponsorUserOperation
+- name: get_paymaster_stub_data
+  description: Get stub paymaster data for gas estimation (ERC-7677).
+  source_method: pm_getPaymasterStubData
+- name: get_paymaster_data
+  description: Get signed paymaster data for a user operation (ERC-7677).
+  source_method: pm_getPaymasterData
+- name: get_erc20_paymaster_quotes
+  description: Get ERC-20 token quotes for paying gas in tokens.
+  source_method: pimlico_getErc20PaymasterQuotes

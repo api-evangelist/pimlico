@@ -1,0 +1,49 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.pimlico.io/references/platform + https://docs.pimlico.io/references/bundler
+note: >-
+  Derived from Pimlico's documented objects (no public OpenAPI). Captures the
+  core entities of the platform + ERC-4337 user-operation flow and how they
+  relate.
+entities:
+- name: ApiKey
+  description: Chain/domain-scoped credential used to authenticate all API calls.
+  managed_in: https://dashboard.pimlico.io
+  relationships:
+  - belongs_to: Account
+- name: Account
+  description: A Pimlico billing account holding sponsorship balance/credits.
+  relationships:
+  - has_many: ApiKey
+  - has_many: SponsorshipPolicy
+- name: SponsorshipPolicy
+  description: >-
+    Rules governing which user operations are eligible for gas sponsorship.
+    CRUD via the Platform API (create/list/retrieve/update).
+  fields:
+  - id
+  identified_by: id (string)
+  relationships:
+  - belongs_to: Account
+  - validates: UserOperation
+  docs: https://docs.pimlico.io/references/platform/api/sponsorship-policies
+- name: UserOperation
+  description: >-
+    ERC-4337 user operation submitted through the bundler; carries sender,
+    nonce, callData, gas fields, and paymaster data.
+  identified_by: userOpHash
+  relationships:
+  - has_one: UserOperationReceipt
+  - validated_by: SponsorshipPolicy
+  - sponsored_by: Paymaster
+- name: Paymaster
+  description: >-
+    Verifying paymaster (gas sponsorship) or ERC-20 paymaster (pay gas in
+    tokens) that attaches paymasterAndData to a user operation.
+  variants:
+  - verifying
+  - erc20
+- name: UserOperationReceipt
+  description: On-chain result of a bundled user operation.
+  relationships:
+  - belongs_to: UserOperation

@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.pimlico.io + https://www.pimlico.io
+standards:
+- id: erc-4337
+  name: ERC-4337 Account Abstraction Using Alt Mempool
+  conforms: true
+  evidence: >-
+    Pimlico is an ERC-4337 bundler + paymaster; exposes the standard
+    eth_sendUserOperation / eth_estimateUserOperationGas /
+    eth_getUserOperationReceipt / eth_supportedEntryPoints JSON-RPC methods.
+- id: erc-7677
+  name: ERC-7677 Paymaster Web Service Capability
+  conforms: true
+  evidence: >-
+    Implements pm_getPaymasterStubData / pm_getPaymasterData per the ERC-7677
+    paymaster spec.
+- id: erc-7579
+  name: ERC-7579 Minimal Modular Smart Accounts
+  conforms: true
+  evidence: >-
+    permissionless.js supports ERC-7579 modular accounts (e.g. Biconomy Nexus,
+    Safe modules) built on Pimlico infrastructure.
+- id: eip-7702
+  name: EIP-7702 Set EOA account code
+  conforms: true
+  evidence: Documented EIP-7702 support for upgrading EOAs to smart accounts.
+- id: jsonrpc-2.0
+  name: JSON-RPC 2.0
+  conforms: true
+  evidence: Bundler and paymaster APIs use JSON-RPC 2.0 request/response objects.
+- id: soc2
+  name: SOC 2
+  conforms: true
+  evidence: >-
+    SOC 2 certification published on the Pimlico trust center
+    (https://trust.pimlico.io/). See security/pimlico-trust-center.yml.
+- id: rfc9457-problem-details
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence: Errors are returned as JSON-RPC error objects, not application/problem+json.

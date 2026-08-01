@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: npm registry + https://docs.pimlico.io + https://github.com/pimlicolabs
+packages:
+- language: typescript
+  registry: npm
+  name: permissionless
+  url: https://www.npmjs.com/package/permissionless
+  install: npm install permissionless
+  version: 0.3.7
+  license: MIT
+  repository: https://github.com/pimlicolabs/permissionless.js
+  official: true
+  description: >-
+    Official Pimlico TypeScript SDK built on viem for building with ERC-4337
+    smart accounts, bundlers, paymasters, and user operations.
+- language: typescript
+  registry: npm
+  name: "@permissionless/wagmi"
+  url: https://www.npmjs.com/package/@permissionless/wagmi
+  install: npm install @permissionless/wagmi
+  version: 0.1.5
+  license: MIT
+  repository: https://github.com/pimlicolabs/permissionless.js
+  official: true
+  description: >-
+    React/wagmi bindings that enable gas sponsorship and transaction batching
+    for a wagmi app with a couple lines of code.
+open_source_infrastructure:
+- name: Alto
+  description: Pimlico's open-source, TypeScript ERC-4337 bundler.
+  repository: https://github.com/pimlicolabs/alto
+- name: singleton-paymaster
+  description: Pimlico's open-source ERC-20 / verifying paymaster contracts.
+  repository: https://github.com/pimlicolabs

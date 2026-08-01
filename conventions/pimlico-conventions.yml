@@ -1,0 +1,45 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.pimlico.io/references/platform + https://docs.pimlico.io/references/bundler
+authentication:
+  style: api-key
+  location: query
+  parameter: apikey
+  ref: authentication/pimlico-authentication.yml
+protocol:
+  bundler_paymaster: JSON-RPC 2.0 over HTTPS POST
+  platform: REST/JSON over HTTPS
+  endpoint_pattern: https://api.pimlico.io/v2/{chain}/rpc?apikey=API_KEY
+  chain_addressing: >-
+    The target chain is part of the URL path (numeric chain id or chain name);
+    a single API surface serves 100+ EVM chains.
+idempotency:
+  idempotency_key_header: false
+  mechanism: >-
+    ERC-4337 user operations carry an on-chain `nonce` (per-sender, from the
+    EntryPoint) that provides replay protection; Pimlico does not document a
+    separate HTTP Idempotency-Key header, so idempotency is delegated to the
+    user-operation nonce rather than an API-level key.
+pagination:
+  style: cursor
+  scope: Platform API list methods (e.g. sponsorship policies)
+  params:
+  - limit
+  - starting_after
+  - ending_before
+  ordering: most-recent-first (by creation date)
+  docs: https://docs.pimlico.io/references/platform/api/pagination
+versioning:
+  style: uri-path
+  current: v2
+  previous: v1
+  ref: lifecycle/pimlico-lifecycle.yml
+errors:
+  ref: errors/pimlico-error-codes.yml
+  jsonrpc_error_object: true
+  paymaster_envelope: >-
+    Verifying-paymaster sponsorship failures surface as JSON-RPC errors (e.g.
+    "Insufficient Pimlico balance for sponsorship, please top up").
+rate_limits:
+  ref: rate-limits/pimlico-rate-limits.yml
+  signaling: HTTP 429 on exceeding the plan request-per-minute cap

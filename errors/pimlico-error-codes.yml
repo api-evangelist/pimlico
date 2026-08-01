@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.pimlico.io/references/bundler + https://docs.pimlico.io/references/paymaster/verifying-paymaster/common-errors
+envelope: >-
+  JSON-RPC 2.0 error object ({ "jsonrpc": "2.0", "id": n, "error": { "code":
+  <int>, "message": <string> } }). ERC-4337 validation failures surface as
+  EntryPoint "AAxx" reason strings inside the error message.
+error_classes:
+- class: bundler
+  description: >-
+    ERC-4337 bundler / EntryPoint validation errors, documented as EntryPoint
+    "AAxx" codes (e.g. account/paymaster validation, gas, signature, nonce
+    failures) plus standard JSON-RPC error codes.
+  reference: https://docs.pimlico.io/references/bundler
+- class: verifying-paymaster
+  description: Errors from the sponsoring (verifying) paymaster.
+  reference: https://docs.pimlico.io/references/paymaster/verifying-paymaster/common-errors
+  examples:
+  - message: Insufficient Pimlico balance for sponsorship, please top up
+    cause: >-
+      The Pimlico account's sponsorship balance is exhausted; top up in the
+      dashboard (https://dashboard.pimlico.io/billing/plan).
+    remediation: Add funds / credits to the account before requesting sponsorship.
+- class: erc20-paymaster
+  description: >-
+    Errors from the ERC-20 paymaster (unsupported token, insufficient token
+    balance/allowance for gas payment).
+  reference: https://docs.pimlico.io/references/paymaster/erc20-paymaster/supported-tokens
+notes:
+  - >-
+    Pimlico does not publish an RFC 9457 problem+json catalog; error semantics
+    follow the ERC-4337 / JSON-RPC conventions above. Detailed AAxx code tables
+    are maintained upstream by the eth-infinitism EntryPoint contract.

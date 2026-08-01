@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: generated
+source: >-
+  Grounded in Pimlico's documented ERC-4337 JSON-RPC methods
+  (https://docs.pimlico.io) — no public OpenAPI; method names verified in docs.
+skills:
+- file: pimlico-sponsor-gasless-user-operation.md
+  name: Sponsor a gasless user operation with the verifying paymaster
+  api: https://docs.pimlico.io/references/paymaster
+  operations:
+  - pimlico_getUserOperationGasPrice
+  - pm_getPaymasterStubData
+  - pm_getPaymasterData
+  - eth_sendUserOperation
+  - eth_getUserOperationReceipt
+- file: pimlico-pay-gas-in-erc20.md
+  name: Pay gas in an ERC-20 token via the ERC-20 paymaster
+  api: https://docs.pimlico.io/references/paymaster/erc20-paymaster
+  operations:
+  - pimlico_getErc20PaymasterQuotes
+  - pm_getPaymasterData
+  - eth_sendUserOperation
+  - eth_getUserOperationReceipt

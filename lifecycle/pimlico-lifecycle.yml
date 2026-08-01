@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.pimlico.io + https://status.pimlico.io + https://www.pimlico.io/pricing
+versioning:
+  scheme: uri-path
+  current: v2
+  previous: v1
+  docs: https://docs.pimlico.io/references/bundler
+deprecation:
+  policy_url: https://docs.pimlico.io/references/platform/api/upgrade
+  notes: >-
+    Pimlico announces API behavior changes via documented "API Upgrade" notices
+    (e.g. the eth_estimateUserOperationGas default ETH balance override change),
+    presented as opt-in upgrades ahead of enforcement. The /v1/ endpoint path
+    remains accepted alongside the current /v2/ path.
+  sunset_header: unknown
+status_page: https://status.pimlico.io
+sla:
+  url: https://www.pimlico.io/pricing
+  notes: >-
+    Custom uptime SLA and 24/7 phone support are offered on the Enterprise plan;
+    no numeric uptime target is published on the pay-as-you-go tier.
+deprecated_operations: []

@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.pimlico.io + https://www.pimlico.io/.well-known/security.txt
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - query
+  oauth2_flows: []
+schemes:
+- name: apiKey
+  type: apiKey
+  in: query
+  parameter: apikey
+  description: >-
+    All Pimlico bundler, paymaster, and platform API calls are authenticated
+    with an API key passed as the `apikey` query parameter on the per-chain
+    JSON-RPC endpoint, e.g.
+    https://api.pimlico.io/v2/{chainId or chain-name}/rpc?apikey=YOUR_API_KEY.
+  dashboard: https://dashboard.pimlico.io
+  docs: https://docs.pimlico.io/guides/how-to/platform/create-api-key
+notes:
+  - >-
+    API keys are created and scoped (chain / IP / domain allowlists,
+    sponsorship policies) in the Pimlico dashboard.
+  - >-
+    End-user authentication and account/user management for the Pimlico
+    dashboard are handled by Clerk (per the published security.txt).
+  - >-
+    The endpoint also accepts a legacy /v1/ path in addition to the current
+    /v2/ path; the chain segment accepts either a numeric chain id or a chain
+    name (e.g. sepolia).

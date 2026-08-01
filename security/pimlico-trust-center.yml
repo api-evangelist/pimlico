@@ -1,0 +1,14 @@
+generated: '2026-07-20'
+method: searched
+probe: true
+source: https://trust.pimlico.io/
+url: https://trust.pimlico.io/
+certifications:
+- SOC 2
+evidence:
+- source: https://trust.pimlico.io/
+  keywords:
+  - soc 2
+  - soc2
+  - trust center
+  - compliance certification

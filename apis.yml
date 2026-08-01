@@ -1,8 +1,31 @@
 aid: pimlico
 name: Pimlico
-description: Pimlico is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Pimlico is the world's most popular ERC-4337 account abstraction
+  infrastructure platform, providing production bundler and paymaster APIs plus
+  a platform management API for building, deploying, and operating smart
+  accounts on Ethereum and 100+ EVM-compatible chains. Its verifying paymaster
+  sponsors gas for gasless transactions, its ERC-20 paymaster lets users pay gas
+  in stablecoins and other tokens, and its bundler submits, estimates, and
+  tracks ERC-4337 user operations. Developers integrate through the
+  permissionless.js TypeScript SDK (built on viem) against a single JSON-RPC
+  endpoint keyed by chain, and manage sponsorship policies, API keys, and
+  billing through the Pimlico dashboard.
 url: https://raw.githubusercontent.com/api-evangelist/pimlico/refs/heads/main/apis.yml
+accessModel:
+  pricing: enterprise
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/125581500?v=4
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,10 +34,129 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 21
+  pass: local-v1
 tags:
 - Company
-apis: []
+- Account Abstraction
+- ERC-4337
+- Blockchain
+- Ethereum
+- Web3
+- Paymaster
+- Bundler
+- Smart Accounts
+- Gas Sponsorship
+- Wallets
+- Infrastructure
+apis:
+- name: Pimlico Bundler & Paymaster API
+  description: >-
+    Unified ERC-4337 JSON-RPC endpoint exposing both the Pimlico bundler
+    (eth_sendUserOperation, eth_estimateUserOperationGas,
+    eth_getUserOperationReceipt, pimlico_getUserOperationGasPrice,
+    pimlico_getUserOperationStatus) and paymaster (pm_sponsorUserOperation,
+    pm_getPaymasterData, pm_getPaymasterStubData, ERC-20 token quotes) methods,
+    addressed per chain and authenticated with an API key query parameter.
+  humanURL: https://docs.pimlico.io/references/bundler
+  baseURL: https://api.pimlico.io
+  properties:
+  - type: APIReference
+    url: https://docs.pimlico.io/references/bundler
+  - type: Documentation
+    url: https://docs.pimlico.io
+- name: Pimlico Platform API
+  description: >-
+    REST management API for the Pimlico platform used to create, list,
+    retrieve, and update sponsorship policies that govern which user operations
+    are eligible for gas sponsorship. Uses cursor pagination
+    (limit/starting_after/ending_before).
+  humanURL: https://docs.pimlico.io/references/platform
+  baseURL: https://api.pimlico.io
+  properties:
+  - type: APIReference
+    url: https://docs.pimlico.io/references/platform/api/sponsorship-policies
+  - type: Documentation
+    url: https://docs.pimlico.io/references/platform
+common:
+# --- Identity / link properties (searched) ---
+- type: Website
+  url: https://www.pimlico.io
+- type: DeveloperPortal
+  url: https://dashboard.pimlico.io
+- type: Documentation
+  url: https://docs.pimlico.io
+- type: APIReference
+  url: https://docs.pimlico.io/references/bundler
+- type: Quickstart
+  url: https://docs.pimlico.io/references/permissionless
+- type: Support
+  url: https://t.me/pimlicoHQ
+- type: GitHubOrganization
+  url: https://github.com/pimlicolabs
+- type: Pricing
+  url: https://www.pimlico.io/pricing
+- type: SignUp
+  url: https://dashboard.pimlico.io
+- type: TermsOfService
+  url: https://www.pimlico.io/tos
+- type: PrivacyPolicy
+  url: https://www.pimlico.io/privacy
+- type: StatusPage
+  url: https://status.pimlico.io
+- type: X
+  url: https://x.com/pimlicoHQ
+# --- Enrichment artifacts ---
+- type: LLMsTxt
+  url: llms/pimlico-llms.txt
+- type: SecurityTxt
+  url: well-known/pimlico-security.txt
+- type: WellKnown
+  url: well-known/pimlico-well-known.yml
+- type: Packages
+  url: packages/pimlico-packages.yml
+- type: SDKs
+  url: packages/pimlico-packages.yml
+- type: Authentication
+  url: authentication/pimlico-authentication.yml
+- type: Conventions
+  url: conventions/pimlico-conventions.yml
+- type: DomainSecurity
+  url: security/pimlico-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/pimlico-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.pimlico.io/.well-known/security.txt
+- type: TrustCenter
+  url: security/pimlico-trust-center.yml
+- type: Compliance
+  url: security/pimlico-trust-center.yml
+- type: Lifecycle
+  url: lifecycle/pimlico-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/pimlico-lifecycle.yml
+- type: Conformance
+  url: conformance/pimlico-conformance.yml
+- type: ErrorCatalog
+  url: errors/pimlico-error-codes.yml
+- type: DataModel
+  url: data-model/pimlico-data-model.yml
+- type: Sandbox
+  url: sandbox/pimlico-sandbox.yml
+- type: RateLimits
+  url: rate-limits/pimlico-rate-limits.yml
+- type: Plans
+  url: plans/pimlico-plans.yml
+- type: FinOps
+  url: finops/pimlico-finops.yml
+- type: MCPServer
+  url: mcp/pimlico-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
