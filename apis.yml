@@ -97,6 +97,8 @@ apis:
   - type: Documentation
     url: https://docs.pimlico.io/references/platform
 common:
+- type: Pricing
+  url: https://www.pimlico.io/pricing
 # --- Identity / link properties (searched) ---
 - type: Website
   url: https://www.pimlico.io
