@@ -97,6 +97,12 @@ apis:
   - type: Documentation
     url: https://docs.pimlico.io/references/platform
 common:
+- type: Plans
+  url: plans/pimlico-plans.yml
+- type: RateLimits
+  url: rate-limits/pimlico-rate-limits.yml
+- type: FinOps
+  url: finops/pimlico-finops.yml
 - type: Pricing
   url: https://www.pimlico.io/pricing
 # --- Identity / link properties (searched) ---
