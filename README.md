@@ -64,6 +64,123 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Pimlico is a company surfaced as a portfolio company of a16z and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Pimlico is the world's most popular ERC-4337 account abstraction infrastructure platform, providing production bundler and paymaster APIs plus a platform management API for building, deploying, and operating smart accounts on Ethereum and 100+ EVM-compatible chains. Its verifying paymaster sponsors gas for gasless transactions, its ERC-20 paymaster lets users pay gas in stablecoins and other tokens, and its bundler submits, estimates, and tracks ERC-4337 user operations. Developers integrate through the permissionless.js TypeScript SDK (built on viem) against a single JSON-RPC endpoint keyed by chain, and manage sponsorship policies, API keys, and billing through the Pimlico dashboard.
 
-Backed by: a16z
+**Areas:** Company · Account Abstraction · ERC-4337 · Blockchain · Ethereum · Web3 · Paymaster · Bundler · Smart Accounts · Gas Sponsorship · Wallets · Infrastructure
+
+## Pimlico on APIs.io
+
+Everything profiled for Pimlico is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/pimlico/](https://apis.io/providers/pimlico/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Pimlico Bundler & Paymaster API](https://apis.io/apis/pimlico/pimlico-bundler-paymaster-api/) — Unified ERC-4337 JSON-RPC endpoint exposing both the Pimlico bundler (eth_sendUserOperation, eth_estimateUserOperationGas, eth_getUserOperationReceipt,…
+- [Pimlico Platform API](https://apis.io/apis/pimlico/pimlico-platform-api/) — REST management API for the Pimlico platform used to create, list, retrieve, and update sponsorship policies that govern which user operations are eligible…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [pimlico](https://apis.io/servers/pimlico/pimlico/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Pimlico Authentication](https://apis.io/security/pimlico/pimlico-authentication/)
+- [Pimlico Domain Security](https://apis.io/security/pimlico/pimlico-domain-security/)
+- [Pimlico Trust Center](https://apis.io/security/pimlico/pimlico-trust-center/)
+- [Pimlico Vulnerability Disclosure](https://apis.io/security/pimlico/pimlico-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Pimlico Plans](https://apis.io/plans/pimlico/pimlico-plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Pimlico Rate Limits](https://apis.io/rate-limits/pimlico/pimlico-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Pimlico Finops](https://apis.io/finops/pimlico/pimlico-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.pimlico.io)
+- [Documentation](https://docs.pimlico.io)
+- [API reference](https://docs.pimlico.io/references/bundler)
+- [Pricing](https://www.pimlico.io/pricing)
+- [Sign up](https://dashboard.pimlico.io)
+- [Support](https://t.me/pimlicoHQ)
+- [Security](https://www.pimlico.io/.well-known/security.txt)
+- [Terms of service](https://www.pimlico.io/tos)
+- [Privacy policy](https://www.pimlico.io/privacy)
+- [GitHub](https://github.com/pimlicolabs)
+- [Status](https://status.pimlico.io)
+
+## API Evangelist rating
+
+**Kin Score 43.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 50.0 |
+| Developer ergonomics | 61.3 |
+| Access clarity | 68.4 |
+
+**Agent readiness 8.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 32.1** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/pimlico/](https://apis.io/providers/pimlico/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Pimlico: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/pimlico/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
